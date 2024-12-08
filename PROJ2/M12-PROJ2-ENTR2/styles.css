@@ -1,0 +1,122 @@
+/* General reset for margin, padding, and box sizing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Set body styles, create dark arcade atmosphere */
+  body {
+    font-family: 'Press Start 2P', cursive; /* Retro pixel font */
+    background: linear-gradient(135deg, #4a1f63, #8f56a0); /* Dark purple to pink gradient */
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  /* Center the container and add shadow for arcade feel */
+  .container {
+    text-align: center;
+    border: 5px solid #ff4081; /* Neon pink border for arcade vibes */
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 20px 5px rgba(255, 255, 255, 0.2); /* Soft glow around container */
+    background: #2e1b47; /* Dark purple background */
+  }
+  
+  /* Styling the game canvas */
+  .canvas-wrapper {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  
+  canvas {
+    border: 3px solid #ff4081; /* Neon pink border around the canvas */
+    background-color: #111; /* Dark background for canvas */
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.3); /* Soft glow for canvas */
+  }
+  
+  /* Controls container */
+  .controls {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  /* Button styling */
+  button {
+    background-color: #ff4081; /* Neon pink background */
+    color: #fff;
+    border: 3px solid #ff4081;
+    padding: 12px 24px;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    transition: background-color 0.3s, box-shadow 0.3s;
+    letter-spacing: 2px;
+  }
+  
+  button:hover {
+    background-color: #f7338c; /* Lighter pink on hover */
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.7); /* Bright glow on hover */
+  }
+  
+  button:active {
+    background-color: #e91e63; /* Slightly darker pink on click */
+    box-shadow: 0 0 25px rgba(255, 255, 255, 0.9); /* Stronger glow on click */
+  }
+  
+  /* Highscore container */
+  .highscore {
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #ff4081;
+  }
+  
+  /* Styling for score, life, and level */
+  .score {
+    font-size: 24px;
+    color: #ff4081;
+  }
+  
+  .life_val, .level_val {
+    font-size: 18px;
+    color: #f8f8f8;
+  }
+  
+  /* Add some styling for the canvas grid */
+  .grid {
+    border: 1px solid #2e1b47;
+  }
+  
+  /* Styling for text in the game */
+  span {
+    font-size: 24px;
+  }
+  
+  /* Ensure responsive scaling for mobile */
+  @media (max-width: 600px) {
+    canvas {
+      width: 100%;
+      height: auto;
+    }
+    .container {
+      width: 80%;
+      padding: 10px;
+    }
+    button {
+      width: 100%;
+      padding: 10px;
+      font-size: 16px;
+    }
+  }
+  
